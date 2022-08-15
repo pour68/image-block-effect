@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.parent {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+}
+
+.child-title {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    font-size: 10vw;
+    line-height: 100vh;
+    text-align: center;
+    color: #fff;
+}
+
+.child-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.child-banner .grandchild-blocks {
+    position: relative;
+    display: block;
+    transform-box: unset;
+    width: 5vw;
+    height: 5vh;
+    animation: animate 0.75s ease-in-out forwards;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: scale(0) translateY(1000px);
+    }
+
+    50% {
+        opacity: 1;
+        background-image: url(../img/code.jpg);
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        background-image: url(../img/code.jpg);
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
